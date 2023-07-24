@@ -1,16 +1,19 @@
 package edu.yanchuk.springbootcouchbasedemo;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.couchbase.core.mapping.Document;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Document
 public class User {
+    @Id
     private UUID id;
     private String email;
     private String fullName;
     private LocalDate birthDate;
     private Gender gender;
-
-    // Constructors, getters, and setters
 
     public User(UUID id, String email, String fullName, LocalDate birthDate, Gender gender) {
         this.id = id;
@@ -19,8 +22,6 @@ public class User {
         this.birthDate = birthDate;
         this.gender = gender;
     }
-
-    // Getters and setters (you can generate them automatically in IDE)
 
     public UUID getId() {
         return id;
@@ -61,8 +62,6 @@ public class User {
     public void setGender(Gender gender) {
         this.gender = gender;
     }
-
-    // You can override the toString() method if you want a custom string representation of the User object
 
     @Override
     public String toString() {
