@@ -23,6 +23,10 @@ public class User {
         this.gender = gender;
     }
 
+    public User() {
+
+    }
+
     public UUID getId() {
         return id;
     }
