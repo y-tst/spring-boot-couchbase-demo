@@ -12,7 +12,7 @@ import java.util.UUID;
 
 
 @SpringBootApplication
-@EnableCouchbaseRepositories(basePackages = "edu.yanchuk.springbootcouchbasedemo")
+//@EnableCouchbaseRepositories(basePackages = "edu.yanchuk.springbootcouchbasedemo")
 public class SpringBootCouchbaseDemoApplication implements CommandLineRunner {
 
 	@Autowired
